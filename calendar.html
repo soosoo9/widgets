@@ -10,7 +10,6 @@
 
 body {
 	font-family: monospace;
-	color: #65473a;
 }
 
 .wrapper {
@@ -27,7 +26,7 @@ body {
 }
 	    
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
     table-layout: fixed;
     position: absolute;
     background-color: #fff;
@@ -56,8 +55,8 @@ table {
 
 td,th {
 	text-align: center;
-	background-color: #fff;
-	color: #65473a;	
+	/* background-color: #fff;
+	color: #65473a;	*/
 }
 	    
 th {
@@ -69,14 +68,14 @@ th {
 
 td {
     padding: 0;
-    border-bottom: 1px solid #65473a;
+    border-bottom: 1px solid #0000ff;
 }
 	    
 td>span {
-    color: #65473a;
+    color: rgb(0, 255, 0);
     padding: 10px;
     display: block;
-    border: 2px solid #red;
+    border: 2px solid #transparent;
     transition: border 0.3s ease;
 }
 
@@ -86,8 +85,9 @@ td.avui>span {
     color: #fff;
 }
 	    
-td.fora > span {
-    opacity: 0.2;
+td.fora>span {
+	opacity; 0.2;
+	color: #FC5185;
 }
 
 .boto-next, .boto-prev {
