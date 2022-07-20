@@ -13,11 +13,13 @@ body {
 }
 
 .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	felx-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+	border-radius: 5px;
 }
 
 #calendar {
@@ -26,12 +28,12 @@ body {
 }
 	    
 table {
-    border-collapse: separate;
+    border-collapse: collapse;
     table-layout: fixed;
     position: absolute;
     background-color: #fff;
     border: 2.5px solid #65473a;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .month {
@@ -68,11 +70,11 @@ th {
 
 td {
     padding: 0;
-    border-bottom: 1px solid #0000ff;
+    border-bottom: 1px solid #65473a; /*blue*/
 }
 	    
 td>span {
-    color: rgb(0, 255, 0);
+    color: rgb(101, 71, 58); /*green*/
     padding: 10px;
     display: block;
     border: 2px solid #transparent;
@@ -87,7 +89,7 @@ td.avui>span {
 	    
 td.fora>span {
 	opacity; 0.2;
-	color: #FC5185;
+	color: #65473a; /*red*/
 }
 
 .boto-next, .boto-prev {
