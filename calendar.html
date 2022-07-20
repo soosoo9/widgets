@@ -7,9 +7,8 @@
     <title>Calendar</title>
 
     <style>
-
 body {
-	font-family: monospace;
+    font-family: monospace;
 }
 
 .wrapper {
@@ -20,8 +19,9 @@ body {
     min-height: 100%;
 }
 
+
 #calendar {
-    margin: 0 auto;
+    margin:  0 auto;
     font-size: 14px;
 }
 	    
@@ -30,12 +30,13 @@ table {
     table-layout: fixed;
     position: absolute;
     background-color: #fff;
-    border: 2.5px solid #65473a;
+    border: 2px solid #000000;
+    box-shadow: 2px 2px 1px 0px #000000;
     border-radius: 5px;
 }
 
 .month {
-    background-color: #65473a;
+    background-color: #000;
     color: #fff;
     font-size: 1.5em;
 }
@@ -47,50 +48,48 @@ table {
     text-shadow: none;
     color: #fff;
 }
-	    
-.day-header {
-	background-color: #f9eadd;
-	color: #65473a;
+
+.day-header{
+    background-color: #f3fff3;
 }
 
 td,th {
-	text-align: center;
-	/* background-color: #fff;
-	color: #65473a;	*/
+    text-align: center;
+    background-color: #fff;
 }
 	    
 th {
     padding: 10px;
-    /*background-color: #65473a;
-    color: #fff;*/
+    /* background-color: #000000;
+    color: #fff; */
     /* font-weight: normal; */
 }
 
 td {
     padding: 0;
-    border-bottom: 1px solid #d1b2a5;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 	    
 td>span {
-    color: #65473a;
+    color: rgb(0, 0, 0);
     padding: 10px;
     display: block;
-    border: 2px solid #transparent;
+    border: 2px solid transparent;
     transition: border 0.3s ease;
 }
 
 td.avui>span {
     font-weight: bold;
-    background-color: #65473a;
+    background-color: #000000;
     color: #fff;
 }
-	    
-td.fora>span {
-	opacity: 0.2;
+td.fora > span {
+    opacity: 0.2;
 }
 
+
 .boto-next, .boto-prev {
-    background: #65473a;
+    background: #000;
     color: #fff;
     font-family: inherit;
     border: none;
@@ -113,10 +112,9 @@ td.fora>span {
 </head>
 	
 <body>
-	<div class="">
-		<div id="calendar">
-		</div>
-	</div>
+    <div class="">
+        <div id="calendar"></div>
+      </div>
 	
 <script>
 var months = [
@@ -161,8 +159,11 @@ Number.prototype.pad = function(num) {
     return str += this.toString();
 }
 
-function calendar(widget, data) {
+function calendar(widget, data)
+{
+
     var original = widget.getElementsByClassName('actiu')[0];
+
     if(typeof original === 'undefined')
     {
         original = document.createElement('table');
@@ -171,7 +172,7 @@ function calendar(widget, data) {
 			      data.getMonth().pad(2) + '/' +
 			      data.getDate().pad(2))
         widget.appendChild(original);
-}
+    }
 
     var diff = data - new Date(original.getAttribute('data-actual'));
 
