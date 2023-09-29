@@ -20,25 +20,25 @@ body{
 }
     
 .days {
-      background: #848c76;
+      background: #f1e0ce;
 }
     
 .hours {
-      background: #c0c4aa;
+      background: #9a6e58;
 }
     
 .minutes {
-      background: #848c76;
+      background: #f1e0ce;
 }
     
 .seconds {
-      background: #c0c4aa;
+      background: #9a6e58;
 }
     
 .numbers {
       font-family: 'courier' monospace;
       font-weight: bold;
-      color:  #454a37;
+      color:  #65483b;
       font-size: 4.5em;
       text-align: center;
 }
